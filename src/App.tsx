@@ -160,7 +160,7 @@
 // }
 
 // export default App;
-import React, { useState, useCallback } from 'react';
+import { useState, useCallback } from 'react';
 import {
   Container,
   Typography,
@@ -173,11 +173,11 @@ import {
   createTheme,
 } from '@mui/material';
 import SearchBar from './components/SearchBar/SearchBar';
-import WeatherCard from './components/WeatherCard/WeatherCard';
+//import WeatherCard from './components/WeatherCard/WeatherCard';
 import WeatherDisplay from './components/weatherDisplay/WeatherDisplay';
 import Forecast from './components/Forecast/Forescast'; // keep your existing path
 import { useWeather } from './hooks/useWeather';
-import type { TemperatureUnit } from './types/weather.types';
+//import type { TemperatureUnit } from './types/weather.types';
 
 import './App.css';
 
@@ -249,7 +249,7 @@ function App() {
       const { latitude, longitude } = position.coords;
 
       await fetchWeatherByCoords(latitude, longitude); // ✅ real implementation
-
+    
       setSnackbarMessage('Location weather loaded successfully');
       setSnackbarOpen(true);
     } catch (err) {
